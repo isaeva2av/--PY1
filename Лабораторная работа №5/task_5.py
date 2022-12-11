@@ -1,11 +1,11 @@
 from random import sample
-import string
+from string import ascii_uppercase, ascii_lowercase, digits
 
 
 def get_random_password(length) -> str:
     # Генирируем значения с помощью первой константы (буквами верхнего, нижнего регистра), и второй - цифры.
-    random_password = string.ascii_uppercase + string.ascii_lowercase + string.digits
-    random_string = ''.join(random.sample(random_password, length))  # Формируем случайную строку определенной длины.
+    random_password = ascii_uppercase + ascii_lowercase + digits
+    random_string = ''.join(sample(random_password, length))  # Формируем случайную строку определенной длины.
     return random_string
 
 
